@@ -1,7 +1,13 @@
 import React from "react";
+import Home from "./pages/home/home";
+import { Container } from "./styles/appStyles";
 
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Container>
+      <Home />
+    </Container>
+  );
 }
 
 export default App;
