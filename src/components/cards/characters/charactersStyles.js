@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerCharacter = styled.div``
 
-export const Button = styled.button`
+export const ButtonTest = styled.button`
     width: 300px;
     height: 60px;
 
