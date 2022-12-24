@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 import api from "../../../services/api";
 
@@ -18,8 +18,10 @@ function CardCharacters() {
         {
           image: consumed.results[0].image,
           name: consumed.results[0].name,
+          status: consumed.results[0].status,
           species: consumed.results[0].species,
           location: consumed.results[0].location.name,
+          origin: consumed.results[0].origin.name,
         },
       ]);
     } catch (error) {
@@ -34,13 +36,33 @@ function CardCharacters() {
       <ul>
         {character.map((item) => {
           return (
-            <Card key={item.id} style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={item.image} />
+            <Card className="cardCharacters" key={item.id}>
+              <Card.Img className="imageCardCharacters" src={item.image} />
               <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>{item.species}</Card.Text>
-                <Card.Text>{item.location}</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Title className="nameCardCharacters">
+                  {item.name}
+                </Card.Title>
+                <div className="infoLiveCardCharacters">
+                  <Card.Text className="textCardCharacters">
+                    {item.status}
+                  </Card.Text>
+                  -
+                  <Card.Text className="textCardCharacters">
+                    {item.species}
+                  </Card.Text>
+                </div>
+                <div className="infoLocation">
+                  <p className="labelInfo">Last known location:</p>
+                  <Card.Text className="textCardCharacters">
+                    {item.location}
+                  </Card.Text>
+                </div>
+                <div>
+                  <p className="labelInfo">Origem</p>
+                  <Card.Text className="textCardCharacters">
+                    {item.origin}
+                  </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           );
