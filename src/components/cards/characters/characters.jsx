@@ -9,21 +9,14 @@ import { ContainerCharacter } from "./charactersStyles";
 
 function CardCharacters() {
   const [character, setCharacter] = useState([]);
+  const [result, setResults] = useState([]);
 
   useEffect(() => {
     async function handleCharacters() {
       try {
         const { data: consumed } = await api.get("/character");
-        setCharacter([
-          {
-            image: consumed.results[0].image,
-            name: consumed.results[0].name,
-            status: consumed.results[0].status,
-            species: consumed.results[0].species,
-            location: consumed.results[0].location.name,
-            origin: consumed.results[0].origin.name,
-          },
-        ]);
+        const testing = setResults[consumed.results];
+        setCharacter[result];
       } catch (error) {
         console.log(error);
       }
