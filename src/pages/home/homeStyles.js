@@ -1,24 +1,17 @@
 import styled from "styled-components";
 
-export const ContainerHome = styled.div``
+export const ContainerHome = styled.div``;
 
 export const Section = styled.div`
-    margin: 60px;
-    height: 600px; 
+  margin: 60px;
+  height: auto;
 
-    background-color: #0c0c0c;
+  padding-bottom: 60px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-export const Button = styled.button`
-    width: 300px;
-    height: 50px;
-
-    font-size: 20px;
-
-    cursor: pointer;
-`
+  background-color: #0c0c0c;
+  border-radius: 12px;
+`;
