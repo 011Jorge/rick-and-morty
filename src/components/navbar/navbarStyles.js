@@ -1,81 +1,40 @@
 import styled from "styled-components";
 
-
 export const ContainerNavbar = styled.div`
-    .border {
-    border: 1px solid red;
-    }
-    
-    width: 100%;
-    height: 150px;
+  width: 100%;
+  height: 280px;
 
-    background-color: #0c0c0c;
+  background-color: #0c0c0c;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    font-family: 'Goldman', cursive;
-
-`
+  font-family: "Goldman", cursive;
+`;
 
 export const Image = styled.img`
-    width: 300px;
-    margin-left: 20px;
-`
+  width: 380px;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+`;
 
 export const Input = styled.input`
-    width: 500px;
-    height: 50px;
+  width: 700px;
+  height: 60px;
 
-    padding-left: 20px;
-    
-    font-size: 17px;
-    font-family: 'Goldman', cursive;
+  padding-left: 20px;
 
-    border-radius: 12px;
+  font-size: 17px;
+  font-family: "Goldman", cursive;
 
-    outline: none;
-    border: none;
+  border-radius: 12px;
 
-    -webkit-box-shadow: 6px 7px 18px 0px rgba(8,201,82,0.76);
-    -moz-box-shadow: 6px 7px 18px 0px rgba(8,201,82,0.76);
-    box-shadow: 6px 7px 18px 0px rgba(8,201,82,0.76);
-`
+  outline: none;
+  border: none;
 
-
-export const Navbar = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    padding-right: 10px;
-`
-
-export const Link = styled.li`
-    padding: 20px;
-    list-style: none;
-    cursor: pointer;
-    border: none;
-    transition: 1s all;
-
-    &:hover {
-        border-radius: 5px;
-        border: 1px solid rgba(8,201,82,0.76);
-    }
-
-    
-    a {
-        color: #fff;
-        font-size: 20px;
-        text-decoration: none;
-        
-
-        &:active {
-            opacity:  0.6;
-        }
-
-        padding: 20px;
-
-    }
-`
+  -webkit-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+  -moz-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+  box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+`;
