@@ -1,5 +1,5 @@
 import React from "react";
-import CardCharacters from "../../components/cards/characters/characters";
+import CardCharacters from "../../components/characters/characters";
 
 import Nav from "../../components/navbar/navbar";
 
