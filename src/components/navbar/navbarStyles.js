@@ -2,22 +2,33 @@ import styled from "styled-components";
 
 export const ContainerNavbar = styled.div`
   width: 100%;
-  height: 280px;
+  height: 240px;
+  position: fixed;
 
-  background-color: #0c0c0c;
+  background: rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(13.5px);
+  backdrop-filter: blur(13.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+  -moz-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+  -webkit-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   font-family: "Goldman", cursive;
+
+  @media (max-width: 1400px) {
+    height: 200px;
+  }
 `;
 
 export const Image = styled.img`
   width: 380px;
-  margin-left: 20px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin: 0;
+  margin: 15px;
 
   //iPhone5/SE responsiveness
   @media (max-width: 400px) {
@@ -32,6 +43,7 @@ export const Image = styled.img`
   //monitor's responsiveness
   @media (max-width: 1800px) {
     width: 300px;
+    margin: 10px;
   }
 `;
 

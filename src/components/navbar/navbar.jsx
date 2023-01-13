@@ -8,7 +8,7 @@ function Nav() {
   return (
     <ContainerNavbar>
       <Image src={ImageLogo} alt="logo-rick-and-morty" />
-      <Input type="text" placeholder="Buscar..." />
+      <Input type="text" placeholder="Search..." />
     </ContainerNavbar>
   );
 }
