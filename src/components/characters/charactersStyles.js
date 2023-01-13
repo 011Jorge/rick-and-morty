@@ -25,6 +25,10 @@ export const ContainerCharacter = styled.div`
   justify-content: stretch;
   gap: 50px;
 
+  @media (max-width: 560px) {
+    gap: 300px;
+  }
+
   //monitor's responsiveness
   @media (max-width: 1800px) {
     grid-template-columns: repeat(2, auto);
@@ -50,12 +54,6 @@ export const Card = styled.div`
     margin-right: 12px;
     border-radius: 10px 0 0 10px;
 
-    //iPhoneX responsiveness
-    @media (max-width: 560px) {
-      border-radius: 10px 10px 0 0;
-      margin: 0;
-    }
-
     //ipad responsiveness
     @media (max-width: 660px) {
       width: 200px;
@@ -67,18 +65,19 @@ export const Card = styled.div`
   @media (max-width: 560px) {
     display: flex;
     flex-direction: column;
-    width: min-content !important;
+    width: 300px !important;
+    height: auto !important;
   }
 
   //ipad responsiveness
   @media (max-width: 660px) {
-    width: 400px;
-    height: auto;
+    width: 500px;
+    height: 100% !important;
   }
 
   //monitor's responsiveness
   @media (max-width: 1800px) {
-    height: 190px;
+    height: 190px !important;
   }
 `;
 
