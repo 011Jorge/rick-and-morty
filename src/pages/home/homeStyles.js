@@ -14,4 +14,9 @@ export const Section = styled.div`
 
   background-color: #0c0c0c;
   border-radius: 12px;
+
+  //iPhoneX responsiveness
+  @media (max-width: 560px) {
+    margin: 60px 0;
+  }
 `;

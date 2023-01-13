@@ -18,6 +18,21 @@ export const Image = styled.img`
   margin-left: 20px;
   margin-top: 30px;
   margin-bottom: 20px;
+
+  //iPhone5/SE responsiveness
+  @media (max-width: 400px) {
+    width: 250px !important;
+  }
+
+  //iPhoneX responsiveness
+  @media (max-width: 560px) {
+    width: 300px;
+  }
+
+  //monitor's responsiveness
+  @media (max-width: 1800px) {
+    width: 300px;
+  }
 `;
 
 export const Input = styled.input`
@@ -37,4 +52,20 @@ export const Input = styled.input`
   -webkit-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
   -moz-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
   box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+
+  //iPhoneX responsiveness
+  @media (max-width: 560px) {
+    width: 300px !important;
+  }
+
+  //ipad responsiveness
+  @media (max-width: 750px) {
+    width: 500px;
+  }
+
+  //monitor's responsiveness
+  @media (max-width: 1800px) {
+    width: 500px;
+    height: 40px;
+  }
 `;

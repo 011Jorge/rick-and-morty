@@ -6,6 +6,16 @@ export const H1 = styled.h1`
   color: #fff;
   font-size: 50px;
   font-family: "Goldman", cursive;
+
+  //iPhoneX Responsiveness
+  @media (max-width: 380px) {
+    font-size: 40px;
+  }
+
+  //monitor's responsiveness
+  @media (max-width: 1800px) {
+    font-size: 35px;
+  }
 `;
 
 export const ContainerCharacter = styled.div`
@@ -14,11 +24,21 @@ export const ContainerCharacter = styled.div`
   grid-template-rows: auto;
   justify-content: stretch;
   gap: 50px;
+
+  //monitor's responsiveness
+  @media (max-width: 1800px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  //iPhone responsivies
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(1, auto);
+  }
 `;
 
 export const Card = styled.div`
   width: 510px;
-  height: 190px;
+  height: 220px;
 
   display: flex;
 
@@ -29,11 +49,43 @@ export const Card = styled.div`
   img {
     margin-right: 12px;
     border-radius: 10px 0 0 10px;
+
+    //iPhoneX responsiveness
+    @media (max-width: 560px) {
+      border-radius: 10px 10px 0 0;
+      margin: 0;
+    }
+
+    //ipad responsiveness
+    @media (max-width: 660px) {
+      width: 200px;
+      min-height: auto;
+    }
+  }
+
+  //iPhoneX Responsiveness
+  @media (max-width: 560px) {
+    display: flex;
+    flex-direction: column;
+    width: min-content !important;
+  }
+
+  //ipad responsiveness
+  @media (max-width: 660px) {
+    width: 400px;
+    height: auto;
+  }
+
+  //monitor's responsiveness
+  @media (max-width: 1800px) {
+    height: 190px;
   }
 `;
 
 export const InfoCharacters = styled.div`
   padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
 
   h2,
   h4 {
@@ -46,9 +98,22 @@ export const InfoCharacters = styled.div`
     }
   }
 
+  h2 {
+    //monitor's responsiveness
+    @media (max-width: 1800px) {
+      font-size: 22px;
+      padding-bottom: 6px;
+    }
+  }
+
   p {
     padding-top: 10px;
     color: rgb(158, 158, 158);
+
+    //monitor's responsiveness
+    @media (max-width: 1800px) {
+      font-size: 12px;
+    }
   }
 
   .dead,
