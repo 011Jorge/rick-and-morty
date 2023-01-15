@@ -9,6 +9,7 @@ import {
 
 function CardCharacters() {
   const [character, setCharacter] = useState([]);
+  const [info, setInfo] = useState("");
 
   useEffect(() => {
     handleCharacters();
@@ -21,10 +22,12 @@ function CardCharacters() {
         method: "GET",
       }
     );
+
     const my_user = await api_response.json();
+    const my_info = await my_user.info;
     const my_results = await my_user.results;
 
-    console.log(my_results);
+    setInfo(my_info);
     setCharacter(my_results);
   };
 
