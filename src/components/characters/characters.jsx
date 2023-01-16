@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Navigation from "../navigation/navigation.jsx";
 
 import {
   H1,
@@ -9,6 +10,7 @@ import {
 
 function CardCharacters() {
   const [character, setCharacter] = useState([]);
+  const [pages, setPages] = useState("");
   const [info, setInfo] = useState("");
 
   useEffect(() => {
@@ -25,9 +27,11 @@ function CardCharacters() {
 
     const my_user = await api_response.json();
     const my_info = await my_user.info;
+    const my_pages = await my_info.pages;
     const my_results = await my_user.results;
 
     setInfo(my_info);
+    setPages(my_pages);
     setCharacter(my_results);
   };
 
@@ -65,6 +69,7 @@ function CardCharacters() {
           );
         })}
       </ContainerCharacter>
+      <Navigation pages={pages} setPages={setPages} />
     </>
   );
 }
