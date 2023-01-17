@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const H1 = styled.h1`
-  margin: 40px;
+  margin-top: 50px;
 
   color: #fff;
   font-size: 50px;

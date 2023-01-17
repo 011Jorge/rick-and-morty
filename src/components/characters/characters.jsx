@@ -38,7 +38,7 @@ function CardCharacters() {
 
   return (
     <>
-      <H1>Characters</H1>
+      <H1>Personagens</H1>
       <Navigation pagesNumber={pagesNumber} setPagesNumber={setPagesNumber} />
       <ContainerCharacter>
         {character?.map((item) => {

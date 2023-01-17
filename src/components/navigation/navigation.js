@@ -1,29 +1,40 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  margin-top: 50px;
+  margin: 30px 0 50px 0;
 
   display: flex;
   align-items: center;
   gap: 50px;
 
-  border: 1px solid #fff;
-
   padding: 10px;
 
-  a {
+  font-family: "Roboto", sans-serif;
+
+  h1 {
     color: #fff;
-    font-size: 28px;
-    text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 
-    border: 1px solid #fff;
+  button {
+    width: 150px;
+    height: 40px;
 
-    padding: 10px;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+
+    box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+    -moz-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
+    -webkit-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
 
     &:hover {
-      color: green;
+      opacity: 0.6;
+      transition: 0.5s;
     }
   }
 `;

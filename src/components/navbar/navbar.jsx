@@ -15,7 +15,7 @@ function Nav() {
         name="search"
         onChange={(e) => setSearch(e.target.value)}
         type="text"
-        placeholder="Search..."
+        placeholder="Buscar..."
       />
     </ContainerNavbar>
   );

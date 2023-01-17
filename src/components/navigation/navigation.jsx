@@ -24,7 +24,7 @@ function Navigation({ pagesNumber, setPagesNumber }) {
       </button>
       <h1>{pagesNumber}</h1>
       <button onClick={next} type="button">
-        Pŕoximo
+        Próximo
       </button>
     </Content>
   );
