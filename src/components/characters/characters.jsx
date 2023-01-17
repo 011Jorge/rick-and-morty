@@ -10,34 +10,36 @@ import {
 
 function CardCharacters() {
   const [character, setCharacter] = useState([]);
-  const [pages, setPages] = useState("");
+  const [pagesNumber, setPagesNumber] = useState(1);
+  const [buscar, setBuscar] = useState("");
   const [info, setInfo] = useState("");
 
+  const Url =
+    "https://rickandmortyapi.com/api/character/?page=" +
+    pagesNumber +
+    "&name=" +
+    buscar;
+
   useEffect(() => {
-    handleCharacters();
-  }, []);
-
-  const handleCharacters = async () => {
-    const api_response = await fetch(
-      "https://rickandmortyapi.com/api/character",
-      {
-        method: "GET",
-      }
-    );
-
-    const my_user = await api_response.json();
-    const my_info = await my_user.info;
-    const my_pages = await my_info.pages;
-    const my_results = await my_user.results;
-
-    setInfo(my_info);
-    setPages(my_pages);
-    setCharacter(my_results);
-  };
+    if (pagesNumber == 0) {
+      return setCharacter(null);
+    }
+    fetch(Url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          setCharacter(data.error);
+        } else {
+          setCharacter(data.results);
+          setInfo(data.info);
+        }
+      });
+  }, [Url]);
 
   return (
     <>
       <H1>Characters</H1>
+      <Navigation pagesNumber={pagesNumber} setPagesNumber={setPagesNumber} />
       <ContainerCharacter>
         {character?.map((item) => {
           return (
@@ -69,7 +71,6 @@ function CardCharacters() {
           );
         })}
       </ContainerCharacter>
-      <Navigation pages={pages} setPages={setPages} />
     </>
   );
 }
