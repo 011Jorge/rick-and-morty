@@ -8,32 +8,6 @@ import {
 } from "./charactersStyles.js";
 
 function CardCharacters() {
-  const [character, setCharacter] = useState([]);
-  // const [pages, setPages] = useState("");
-  // const [info, setInfo] = useState("");
-
-  useEffect(() => {
-    handleCharacters();
-  }, []);
-
-  const handleCharacters = async () => {
-    const api_response = await fetch(
-      "https://rickandmortyapi.com/api/character",
-      {
-        method: "GET",
-      }
-    );
-
-    // const my_user = await api_response.json();
-    // const my_info = await my_user.info;
-    // const my_pages = await my_info.pages;
-    // const my_results = await my_user.results;
-
-    // setInfo(my_info);
-    // setPages(my_pages);
-    // setCharacter(my_results);
-  };
-
   return (
     <>
       <H1>Characters</H1>
