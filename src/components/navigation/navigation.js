@@ -1,4 +1,5 @@
-import styled from "styled-components";
+/* eslint-disable  */
+import styled from 'styled-components'
 
 export const Content = styled.div`
   margin: 30px 0 50px 0;
@@ -9,7 +10,7 @@ export const Content = styled.div`
 
   padding: 10px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   h1 {
     color: #fff;
@@ -26,7 +27,7 @@ export const Content = styled.div`
 
     font-size: 14px;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
     -moz-box-shadow: 6px 7px 18px 0px rgba(8, 201, 82, 0.76);
@@ -37,4 +38,4 @@ export const Content = styled.div`
       transition: 0.5s;
     }
   }
-`;
+`

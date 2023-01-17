@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const H1 = styled.h1`
   margin: 40px;
 
   color: #fff;
   font-size: 50px;
-  font-family: "Goldman", cursive;
+  font-family: 'Goldman', cursive;
 
   //iPhoneX Responsiveness
   @media (max-width: 380px) {
@@ -16,7 +16,7 @@ export const H1 = styled.h1`
   @media (max-width: 1800px) {
     font-size: 35px;
   }
-`;
+`
 
 export const ContainerCharacter = styled.div`
   display: grid;
@@ -38,7 +38,7 @@ export const ContainerCharacter = styled.div`
   @media (max-width: 1300px) {
     grid-template-columns: repeat(1, auto);
   }
-`;
+`
 
 export const Card = styled.div`
   width: 510px;
@@ -48,7 +48,7 @@ export const Card = styled.div`
 
   background-color: #3c3e44;
   border-radius: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   img {
     margin-right: 12px;
@@ -79,7 +79,7 @@ export const Card = styled.div`
   @media (max-width: 1800px) {
     height: 190px !important;
   }
-`;
+`
 
 export const InfoCharacters = styled.div`
   padding-top: 15px;
@@ -131,4 +131,4 @@ export const InfoCharacters = styled.div`
   .alive {
     background: rgb(85, 204, 68);
   }
-`;
+`

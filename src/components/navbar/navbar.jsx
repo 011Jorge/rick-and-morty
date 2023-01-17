@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from 'react'
 
-import ImageLogo from "../../images/logo.png";
+import ImageLogo from '../../images/logo.png'
 
-import { ContainerNavbar, Image, Input } from "./navbarStyles";
+import { ContainerNavbar, Image, Input } from './navbarStyles'
 
 function Nav() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('')
 
   return (
     <ContainerNavbar>
@@ -18,7 +18,7 @@ function Nav() {
         placeholder="Buscar..."
       />
     </ContainerNavbar>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

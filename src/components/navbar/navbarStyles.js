@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ContainerNavbar = styled.div`
   width: 100%;
@@ -18,12 +18,12 @@ export const ContainerNavbar = styled.div`
   flex-direction: column;
   align-items: center;
 
-  font-family: "Goldman", cursive;
+  font-family: 'Goldman', cursive;
 
   @media (max-width: 1400px) {
     height: 200px;
   }
-`;
+`
 
 export const Image = styled.img`
   width: 380px;
@@ -45,7 +45,7 @@ export const Image = styled.img`
     width: 300px;
     margin: 10px;
   }
-`;
+`
 
 export const Input = styled.input`
   width: 700px;
@@ -54,7 +54,7 @@ export const Input = styled.input`
   padding-left: 20px;
 
   font-size: 17px;
-  font-family: "Goldman", cursive;
+  font-family: 'Goldman', cursive;
 
   border-radius: 12px;
 
@@ -80,4 +80,4 @@ export const Input = styled.input`
     width: 500px;
     height: 40px;
   }
-`;
+`

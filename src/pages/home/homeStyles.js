@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import test from "../../images/footer.svg";
+import test from '../../images/footer.svg'
 
-export const ContainerHome = styled.div``;
+export const ContainerHome = styled.div``
 
 export const Header = styled.header`
   color: #fff;
@@ -35,7 +35,7 @@ export const Header = styled.header`
 
   h1 {
     font-size: 60px;
-    font-family: "Goldman", cursive;
+    font-family: 'Goldman', cursive;
 
     @media (max-width: 450px) {
       width: 220px;
@@ -56,7 +56,7 @@ export const Header = styled.header`
   p {
     font-size: 23px;
     font-weight: 400;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     //ipad responsiveness
     @media (max-width: 900px) {
@@ -77,7 +77,7 @@ export const Header = styled.header`
       font-size: 16px;
     }
   }
-`;
+`
 
 export const Section = styled.section`
   margin: 60px;
@@ -96,11 +96,11 @@ export const Section = styled.section`
   @media (max-width: 700px) {
     margin: 60px 0;
   }
-`;
+`
 
 export const Footer = styled.footer`
   width: 100%;
   height: 400px;
 
   background-image: url(${test});
-`;
+`
