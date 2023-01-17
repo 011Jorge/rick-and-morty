@@ -6,7 +6,7 @@ import Nav from "../../components/navbar/navbar";
 
 import Image from "../../images/image.png";
 
-import { ContainerHome, Header, Section } from "./homeStyles";
+import { ContainerHome, Footer, Header, Section } from "./homeStyles";
 
 function Home() {
   return (
@@ -31,6 +31,7 @@ function Home() {
       <Section>
         <CardCharacters />
       </Section>
+      <Footer></Footer>
     </ContainerHome>
   );
 }

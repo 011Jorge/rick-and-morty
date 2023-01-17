@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../navigation/navigation.jsx";
 
 import {
-  H1,
-  ContainerCharacter,
   Card,
+  ContainerCharacter,
+  H1,
   InfoCharacters,
 } from "./charactersStyles.js";
 
