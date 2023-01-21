@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Nav from '../navbar/navbar'
 import Navigation from '../navigation/navigation.jsx'
 
 import {
@@ -34,6 +35,7 @@ function CardCharacters() {
 
   return (
     <>
+      <Nav setPagesNumber={setPagesNumber} setBuscar={setBuscar} />
       <H1>Personagens</H1>
       <Navigation pagesNumber={pagesNumber} setPagesNumber={setPagesNumber} />
       <ContainerCharacter>

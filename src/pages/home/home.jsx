@@ -1,9 +1,7 @@
-/* eslint-disable  */
 import React from 'react'
 import Typed from 'react-typed'
 
 import CardCharacters from '../../components/characters/characters'
-import Nav from '../../components/navbar/navbar'
 
 import Image from '../../images/image.png'
 
@@ -12,7 +10,6 @@ import { ContainerHome, Footer, Header, Section } from './homeStyles'
 function Home() {
   return (
     <ContainerHome>
-      <Nav />
       <Header>
         <img src={Image} alt="image-rick-and-morty" style={{ width: 500 }} />
         <div>
