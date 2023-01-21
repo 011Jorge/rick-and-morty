@@ -39,35 +39,43 @@ function CardCharacters() {
       <H1>Personagens</H1>
       <Navigation pagesNumber={pagesNumber} setPagesNumber={setPagesNumber} />
       <ContainerCharacter>
-        {character?.map((item) => {
-          return (
-            <Card key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <InfoCharacters>
-                <h2>{item.name}</h2>
-                <div>
-                  <h4>
-                    {item.status === 'Alive' ? (
-                      <>
-                        <span className="alive"></span>
-                        {item.status} - {item.species}
-                      </>
-                    ) : (
-                      <>
-                        <span className="dead"></span>
-                        {item.status} - {item.species}
-                      </>
-                    )}
-                  </h4>
-                </div>
-                <p>Last known location:</p>
-                <h4>{item.location.name}</h4>
-                <p>Origin:</p>
-                <h4>{item.origin.name}</h4>
-              </InfoCharacters>
-            </Card>
-          )
-        })}
+        {character === 'There is nothing here' ? (
+          <div>
+            <h3>NO existe</h3>
+          </div>
+        ) : (
+          <div>
+            {character?.map((item) => {
+              return (
+                <Card key={item.id}>
+                  <img src={item.image} alt={item.name} />
+                  <InfoCharacters>
+                    <h2>{item.name}</h2>
+                    <div>
+                      <h4>
+                        {item.status === 'Alive' ? (
+                          <>
+                            <span className="alive"></span>
+                            {item.status} - {item.species}
+                          </>
+                        ) : (
+                          <>
+                            <span className="dead"></span>
+                            {item.status} - {item.species}
+                          </>
+                        )}
+                      </h4>
+                    </div>
+                    <p>Last known location:</p>
+                    <h4>{item.location.name}</h4>
+                    <p>Origin:</p>
+                    <h4>{item.origin.name}</h4>
+                  </InfoCharacters>
+                </Card>
+              )
+            })}
+          </div>
+        )}
       </ContainerCharacter>
     </>
   )
