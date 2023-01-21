@@ -34,18 +34,18 @@ export const ContainerCharacter = styled.div`
     justify-content: stretch;
     gap: 50px;
 
-    @media (max-width: 560px) {
-      gap: 300px;
-    }
-
     //monitor's responsiveness
     @media (max-width: 1800px) {
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(3, auto);
     }
 
     //iPhone responsivies
     @media (max-width: 1300px) {
       grid-template-columns: repeat(1, auto);
+    }
+
+    @media (min-width: 2732px) {
+      grid-template-columns: repeat(4, auto);
     }
   }
 `
@@ -69,14 +69,17 @@ export const Card = styled.div`
       width: 200px;
       min-height: auto;
     }
+
+    @media (max-width: 1800px) {
+      width: 170px !important;
+      height: 170px !important;
+      margin: 0;
+    }
   }
 
   //iPhoneX Responsiveness
   @media (max-width: 560px) {
-    display: flex;
-    flex-direction: column;
-    width: 300px !important;
-    height: auto !important;
+    display: contents;
   }
 
   //ipad responsiveness
@@ -87,7 +90,8 @@ export const Card = styled.div`
 
   //monitor's responsiveness
   @media (max-width: 1800px) {
-    height: 190px !important;
+    width: 365px !important;
+    height: 170px;
   }
 `
 
@@ -96,22 +100,32 @@ export const InfoCharacters = styled.div`
   padding-bottom: 15px;
   padding-left: 15px;
 
-  h2,
-  h4 {
+  h2 {
     color: #fff;
-    padding-top: 5px;
 
     :hover {
       color: rgb(255, 152, 0);
       cursor: default;
     }
-  }
 
-  h2 {
     //monitor's responsiveness
     @media (max-width: 1800px) {
-      font-size: 22px;
-      padding-bottom: 6px;
+      font-size: 17px;
+    }
+  }
+
+  h4 {
+    color: #fff;
+    padding-top: 7px;
+
+    :hover {
+      color: rgb(255, 152, 0);
+      cursor: default;
+    }
+
+    //monitor's responsiveness
+    @media (max-width: 1800px) {
+      font-size: 12px;
     }
   }
 
@@ -121,7 +135,8 @@ export const InfoCharacters = styled.div`
 
     //monitor's responsiveness
     @media (max-width: 1800px) {
-      font-size: 12px;
+      font-size: 11px;
+      padding-top: 7px;
     }
   }
 

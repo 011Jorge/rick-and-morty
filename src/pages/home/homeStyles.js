@@ -80,7 +80,7 @@ export const Header = styled.header`
 `
 
 export const Section = styled.section`
-  margin: 60px;
+  margin: 40px;
   height: auto;
 
   padding-bottom: 60px;

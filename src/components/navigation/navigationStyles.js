@@ -36,5 +36,12 @@ export const Container = styled.div`
       opacity: 0.6;
       transition: 0.5s;
     }
+
+    //iPhoneX Responsiveness
+    @media (max-width: 560px) {
+      width: 80px;
+      height: 70px;
+      border-radius: 50%;
+    }
   }
 `
