@@ -1,5 +1,5 @@
 import React from 'react'
-import { Content } from './navigation'
+import { Container } from './navigationStyles'
 
 function Navigation({ pagesNumber, setPagesNumber }) {
   const next = () => {
@@ -16,7 +16,7 @@ function Navigation({ pagesNumber, setPagesNumber }) {
   }
 
   return (
-    <Content>
+    <Container>
       <button onClick={prev} type="button">
         Anterior
       </button>
@@ -24,7 +24,7 @@ function Navigation({ pagesNumber, setPagesNumber }) {
       <button onClick={next} type="button">
         Próximo
       </button>
-    </Content>
+    </Container>
   )
 }
 

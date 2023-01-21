@@ -19,24 +19,34 @@ export const H1 = styled.h1`
 `
 
 export const ContainerCharacter = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: auto;
-  justify-content: stretch;
-  gap: 50px;
-
-  @media (max-width: 560px) {
-    gap: 300px;
+  .noCharacters {
+    color: #808080;
+    font-size: 30px;
+    font-family: 'Goldman', cursive;
+    margin: 100px;
+    text-align: center;
   }
 
-  //monitor's responsiveness
-  @media (max-width: 1800px) {
-    grid-template-columns: repeat(2, auto);
-  }
+  .withCharacters {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    justify-content: stretch;
+    gap: 50px;
 
-  //iPhone responsivies
-  @media (max-width: 1300px) {
-    grid-template-columns: repeat(1, auto);
+    @media (max-width: 560px) {
+      gap: 300px;
+    }
+
+    //monitor's responsiveness
+    @media (max-width: 1800px) {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    //iPhone responsivies
+    @media (max-width: 1300px) {
+      grid-template-columns: repeat(1, auto);
+    }
   }
 `
 

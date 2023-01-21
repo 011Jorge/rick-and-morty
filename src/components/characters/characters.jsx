@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import Nav from '../navbar/navbar'
-import Navigation from '../navigation/navigation.jsx'
+import React from 'react'
+
+import Navigation from '../navigation/navigation'
 
 import {
   Card,
@@ -9,42 +9,18 @@ import {
   InfoCharacters,
 } from './charactersStyles'
 
-function CardCharacters() {
-  const [character, setCharacter] = useState([])
-  const [pagesNumber, setPagesNumber] = useState(1)
-  const [buscar, setBuscar] = useState('')
-  const [info, setInfo] = useState('')
-
-  const Url = `https://rickandmortyapi.com/api/character/?page=${pagesNumber}&name=${buscar}`
-
-  useEffect(() => {
-    if (pagesNumber === 0) {
-      return setCharacter(null)
-    }
-    fetch(Url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          setCharacter(data.error)
-        } else {
-          setCharacter(data.results)
-          setInfo(data.info)
-        }
-      })
-  }, [Url])
-
+function CardCharacters({ character, pagesNumber, setPagesNumber }) {
   return (
     <>
-      <Nav setPagesNumber={setPagesNumber} setBuscar={setBuscar} />
       <H1>Personagens</H1>
       <Navigation pagesNumber={pagesNumber} setPagesNumber={setPagesNumber} />
       <ContainerCharacter>
         {character === 'There is nothing here' ? (
-          <div>
-            <h3>NO existe</h3>
+          <div className="noCharacters">
+            <h3>Nenhum personagem encontrado!</h3>
           </div>
         ) : (
-          <div>
+          <div className="withCharacters">
             {character?.map((item) => {
               return (
                 <Card key={item.id}>
