@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import ImageLogo from '../../images/logo.png'
 
 import { ContainerNavbar, Image, Input } from './navbarStyles'
 
-function Nav() {
-  const [search, setSearch] = useState('')
-
+function Nav({ setPageNumber, setBuscar }) {
   return (
     <ContainerNavbar>
       <Image src={ImageLogo} alt="logo-rick-and-morty" />
       <Input
-        value={search}
-        name="search"
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+          setPageNumber(1)
+          setBuscar(e.target.value)
+        }}
         type="text"
         placeholder="Buscar..."
       />
