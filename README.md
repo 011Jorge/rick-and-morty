@@ -4,7 +4,7 @@
 
 > O projeto consiste em, acessar a api pública Rick and Morty API e buscar todas as informações de todos os personagens da série rick and morty.
 
-### Ajustes e melhorias
+### 🔨 Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
