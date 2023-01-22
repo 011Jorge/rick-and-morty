@@ -1,6 +1,7 @@
 # 🛸 Rick and Morty
 
-<img src="#" alt="image">
+<img src="https://user-images.githubusercontent.com/81838137/213898576-ed5bfb37-e4ea-4f4a-b59a-a5d5419bee35.png
+" alt="image">
 
 > O projeto consiste em, acessar a api pública Rick and Morty API e buscar todas as informações de todos os personagens da série rick and morty.
 
