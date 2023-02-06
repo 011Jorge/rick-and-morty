@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Typed from 'react-typed'
 
-import CardCharacters from '../../components/characters/characters'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import Nav from '../../components/navbar/navbar'
+import CardCharacters from '../../components/characters/characters'
 
 import Logo from '../../images/logo.png'
 import Image from '../../images/image.png'
@@ -33,10 +36,15 @@ function Home() {
       })
   }, [Url])
 
+  AOS.init({
+    easing: 'ease-out-quart',
+    duration: 1000,
+  })
+
   return (
     <ContainerHome>
       <Nav setPagesNumber={setPagesNumber} setBuscar={setBuscar} />
-      <Header>
+      <Header data-aos="fade-down" data-aos-delay="300">
         <img src={Image} alt="image-rick-and-morty" style={{ width: 500 }} />
         <div>
           <h1>
@@ -52,7 +60,7 @@ function Home() {
           </p>
         </div>
       </Header>
-      <Section>
+      <Section data-aos="fade-down">
         <CardCharacters
           character={character}
           setCharacter={setCharacter}
@@ -61,8 +69,8 @@ function Home() {
         />
       </Section>
       <Footer>
-        <img src={Logo} alt="logo-image" />
-        <h5>
+        <img src={Logo} alt="logo-image" data-aos="fade-up-right" />
+        <h5 data-aos="fade-up-left">
           Desenvolvido por <br /> @coding.jorge
         </h5>
         <h6>@2023</h6>

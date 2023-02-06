@@ -1,5 +1,8 @@
 import React from 'react'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import Navigation from '../navigation/navigation'
 
 import {
@@ -10,6 +13,12 @@ import {
 } from './charactersStyles'
 
 function CardCharacters({ character, pagesNumber, setPagesNumber }) {
+  AOS.init({
+    easing: 'ease-out-quart',
+    duration: 1000,
+    once: false,
+  })
+
   return (
     <>
       <H1>Personagens</H1>
@@ -23,7 +32,7 @@ function CardCharacters({ character, pagesNumber, setPagesNumber }) {
           <div className="withCharacters">
             {character?.map((item) => {
               return (
-                <Card key={item.id}>
+                <Card key={item.id} data-aos="fade-up" data-aos-delay="100">
                   <img src={item.image} alt={item.name} />
                   <InfoCharacters>
                     <h2>{item.name}</h2>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ContainerNavbar = styled.div`
   width: 100%;
   height: 240px;
-  position: fixed;
+  position: absolute;
 
   background: rgba(255, 255, 255, 0.35);
   -webkit-backdrop-filter: blur(13.5px);

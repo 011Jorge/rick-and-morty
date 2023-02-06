@@ -17,6 +17,7 @@
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "no-unused-vars": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }
