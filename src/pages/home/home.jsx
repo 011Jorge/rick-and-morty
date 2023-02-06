@@ -4,6 +4,7 @@ import Typed from 'react-typed'
 import CardCharacters from '../../components/characters/characters'
 import Nav from '../../components/navbar/navbar'
 
+import Logo from '../../images/logo.png'
 import Image from '../../images/image.png'
 
 import { ContainerHome, Footer, Header, Section } from './homeStyles'
@@ -59,7 +60,13 @@ function Home() {
           setPagesNumber={setPagesNumber}
         />
       </Section>
-      <Footer></Footer>
+      <Footer>
+        <img src={Logo} alt="logo-image" />
+        <h5>
+          Desenvolvido por <br /> @coding.jorge
+        </h5>
+        <h6>@2023</h6>
+      </Footer>
     </ContainerHome>
   )
 }

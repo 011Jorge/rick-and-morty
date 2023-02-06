@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import test from '../../images/footer.svg'
-
 export const ContainerHome = styled.div``
 
 export const Header = styled.header`
@@ -100,7 +98,28 @@ export const Section = styled.section`
 
 export const Footer = styled.footer`
   width: 100%;
-  height: 400px;
+  height: auto;
 
-  background-image: url(${test});
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto', sans-serif;
+
+  color: #808080;
+  background-color: #0c0c0c;
+
+  h6 {
+    margin-top: 70px;
+  }
+
+  img {
+    width: 300px;
+
+    margin-top: 100px;
+  }
 `
