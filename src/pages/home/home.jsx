@@ -6,6 +6,7 @@ import 'aos/dist/aos.css'
 
 import Nav from '../../components/navbar/navbar'
 import CardCharacters from '../../components/characters/characters'
+import Loading from '../../components/loading/loading'
 
 import Logo from '../../images/logo.png'
 import Image from '../../images/image.png'
@@ -17,23 +18,27 @@ function Home() {
   const [pagesNumber, setPagesNumber] = useState(1)
   const [buscar, setBuscar] = useState('')
   const [info, setInfo] = useState('')
+  const [removeLoading, setRemoveLoading] = useState(false)
 
   const Url = `https://rickandmortyapi.com/api/character/?page=${pagesNumber}&name=${buscar}`
 
   useEffect(() => {
-    if (pagesNumber === 0) {
-      return setCharacter(null)
-    }
-    fetch(Url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          setCharacter(data.error)
-        } else {
-          setCharacter(data.results)
-          setInfo(data.info)
-        }
-      })
+    setTimeout(() => {
+      if (pagesNumber === 0) {
+        return setCharacter(null)
+      }
+      fetch(Url)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error) {
+            setCharacter(data.error)
+          } else {
+            setCharacter(data.results)
+            setInfo(data.info)
+            setRemoveLoading(true)
+          }
+        })
+    }, 2000)
   }, [Url])
 
   AOS.init({
@@ -44,7 +49,7 @@ function Home() {
   return (
     <ContainerHome>
       <Nav setPagesNumber={setPagesNumber} setBuscar={setBuscar} />
-      <Header data-aos="fade-down" data-aos-delay="300">
+      <Header>
         <img src={Image} alt="image-rick-and-morty" style={{ width: 500 }} />
         <div>
           <h1>
@@ -60,13 +65,16 @@ function Home() {
           </p>
         </div>
       </Header>
-      <Section data-aos="fade-down">
+      <Section>
         <CardCharacters
           character={character}
           setCharacter={setCharacter}
           pagesNumber={pagesNumber}
           setPagesNumber={setPagesNumber}
+          removeLoading={removeLoading}
+          setRemoveLoading={setRemoveLoading}
         />
+        {!removeLoading && <Loading />}
       </Section>
       <Footer>
         <img src={Logo} alt="logo-image" data-aos="fade-up-right" />

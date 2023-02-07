@@ -14,7 +14,7 @@ function Nav({ setPagesNumber, setBuscar }) {
     once: true,
   })
   return (
-    <ContainerNavbar data-aos="fade-down">
+    <ContainerNavbar>
       <Image src={ImageLogo} alt="logo-rick-and-morty" />
       <Input
         onChange={(e) => {

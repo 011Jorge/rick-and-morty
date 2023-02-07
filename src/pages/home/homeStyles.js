@@ -3,19 +3,14 @@ import styled from 'styled-components'
 export const ContainerHome = styled.div``
 
 export const Header = styled.header`
-  color: #fff;
-  padding-bottom: 20px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  padding-top: 280px;
+  padding: 50px;
 
-  @media (max-width: 1400px) {
-    padding-top: 220px;
-  }
+  color: #fff;
 
   img {
     @media (max-width: 450px) {
