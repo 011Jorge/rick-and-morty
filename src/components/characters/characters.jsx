@@ -11,15 +11,8 @@ import {
   H1,
   InfoCharacters,
 } from './charactersStyles'
-import Loading from '../loading/loading'
 
-function CardCharacters({
-  character,
-  pagesNumber,
-  setPagesNumber,
-  removeLoading,
-  setRemoveLoading,
-}) {
+function CardCharacters({ character, pagesNumber, setPagesNumber }) {
   AOS.init({
     easing: 'ease-out-quart',
     duration: 1000,
@@ -29,12 +22,7 @@ function CardCharacters({
   return (
     <>
       <H1>Personagens</H1>
-      <Navigation
-        pagesNumber={pagesNumber}
-        setPagesNumber={setPagesNumber}
-        removeLoading={removeLoading}
-        setRemoveLoading={setRemoveLoading}
-      />
+      <Navigation pagesNumber={pagesNumber} setPagesNumber={setPagesNumber} />
       <ContainerCharacter>
         {character === 'There is nothing here' ? (
           <div className="noCharacters">
@@ -68,7 +56,6 @@ function CardCharacters({
                     <p>Origin:</p>
                     <h4>{item.origin.name}</h4>
                   </InfoCharacters>
-                  {!removeLoading && <Loading />}
                 </Card>
               )
             })}

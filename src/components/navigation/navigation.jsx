@@ -1,13 +1,7 @@
-import React from 'react'
-import Loading from '../loading/loading'
+import React, { useState } from 'react'
 import { Container } from './navigationStyles'
 
-function Navigation({
-  pagesNumber,
-  setPagesNumber,
-  removeLoading,
-  setRemoveLoading,
-}) {
+function Navigation({ pagesNumber, setPagesNumber }) {
   const next = () => {
     if (pagesNumber === 0) {
       setPagesNumber(2)

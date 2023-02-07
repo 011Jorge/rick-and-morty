@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 100px;
   .loader {
+    padding: 100px;
     position: relative;
     display: flex;
   }
@@ -21,7 +21,7 @@ export const Container = styled.div`
     animation: left 1s infinite ease-in-out;
   }
   .loader:after {
-    color: green;
+    color: rgba(8, 201, 82, 0.76);
     animation: right 1.1s infinite ease-in-out;
   }
 

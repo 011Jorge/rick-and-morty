@@ -18,27 +18,27 @@ function Home() {
   const [pagesNumber, setPagesNumber] = useState(1)
   const [buscar, setBuscar] = useState('')
   const [info, setInfo] = useState('')
-  const [removeLoading, setRemoveLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   const Url = `https://rickandmortyapi.com/api/character/?page=${pagesNumber}&name=${buscar}`
 
   useEffect(() => {
-    setTimeout(() => {
-      if (pagesNumber === 0) {
-        return setCharacter(null)
-      }
-      fetch(Url)
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.error) {
-            setCharacter(data.error)
-          } else {
-            setCharacter(data.results)
-            setInfo(data.info)
-            setRemoveLoading(true)
-          }
-        })
-    }, 2000)
+    if (pagesNumber === 0) {
+      return setCharacter(null)
+    }
+    setIsLoading(true)
+    setCharacter(null)
+    fetch(Url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          setCharacter(data.error)
+        } else {
+          setCharacter(data.results)
+          setInfo(data.info)
+          setIsLoading(false)
+        }
+      })
   }, [Url])
 
   AOS.init({
@@ -71,10 +71,8 @@ function Home() {
           setCharacter={setCharacter}
           pagesNumber={pagesNumber}
           setPagesNumber={setPagesNumber}
-          removeLoading={removeLoading}
-          setRemoveLoading={setRemoveLoading}
         />
-        {!removeLoading && <Loading />}
+        {isLoading && <Loading />}
       </Section>
       <Footer>
         <img src={Logo} alt="logo-image" data-aos="fade-up-right" />
