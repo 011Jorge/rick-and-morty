@@ -14,7 +14,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Responsividade do site.
 - [x] Buscar personagens pelo nome.
 - [ ] Fazer deploy da aplicação.
-- [ ] Concluir o Readme.
+- [x] Concluir o Readme.
 
 ### ⚛ API
 
