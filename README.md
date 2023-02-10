@@ -13,6 +13,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Renderizar todas as páginas.
 - [x] Responsividade do site.
 - [x] Buscar personagens pelo nome.
+- [x] Adicionar um loader a cada new page.
 - [ ] Fazer deploy da aplicação.
 - [x] Concluir o Readme.
 
