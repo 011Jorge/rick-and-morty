@@ -15,7 +15,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Buscar personagens pelo nome.
 - [x] Criar animação a cada scroll.
 - [x] Adicionar um loader a cada new page.
-- [ ] Fazer deploy da aplicação.
+- [X] Fazer deploy da aplicação.
 - [x] Concluir o Readme.
 
 ### ⚛ API
