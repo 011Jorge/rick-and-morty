@@ -54,7 +54,7 @@ Caso haja algum problema cole o seguinte comando no seu terminal para baixar alg
 yarn ou npm
 ```
 
-## 🤝 Colaboradores
+## 🤝 Colaboradores:
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
